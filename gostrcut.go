@@ -11,6 +11,13 @@ func main(){
  fmt.Println(newPerson("Mahesh"))
  r := shaperect{width: 10, height: 10}
   fmt.Println(r.perimeter())
+ fmt.Println(r.area())
+ measure(r)
+}
+
+//non-pointer method
+type geometry interface {
+  perimeter() int
 }
 
 type person struct {
@@ -28,12 +35,23 @@ func newPerson(name string) *person {
 
 }
 
+
+func (r *shaperect) area() int {
+   return r.width * r.height
+ }
+
 type shaperect struct {
  width, height int
 
 }
 
 
-func (r *shaperect) perimeter() int {
+func (r shaperect) perimeter() int {
    return 2*r.width + 2*r.height
  }
+
+func measure(g geometry) {
+ fmt.Println(g)
+ fmt.Println(g.perimeter())
+
+}
