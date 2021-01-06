@@ -9,6 +9,8 @@ func main(){
  fmt.Println(person{name: "Mahesh"})
  //function
  fmt.Println(newPerson("Mahesh"))
+ r := shaperect{width: 10, height: 10}
+  fmt.Println(r.perimeter())
 }
 
 type person struct {
@@ -26,3 +28,12 @@ func newPerson(name string) *person {
 
 }
 
+type shaperect struct {
+ width, height int
+
+}
+
+
+func (r *shaperect) perimeter() int {
+   return 2*r.width + 2*r.height
+ }
