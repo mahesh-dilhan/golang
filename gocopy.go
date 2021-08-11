@@ -9,4 +9,11 @@ func main() {
 	n := copy(dst, src)
 	fmt.Println("dst:", dst, "(copied", n, "numbers)")
 
+	appendMe(src, dst)
+
+}
+
+func appendMe(src, dst []int) {
+	dst = append(dst, src...)
+	fmt.Println("dst:", dst)
 }
