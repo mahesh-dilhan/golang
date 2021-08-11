@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 
@@ -11,4 +14,9 @@ func main() {
 
 	s := fmt.Sprintf("%c%c, world!", 72, 'i')
 	fmt.Println(s) // "Hi, world!"
+
+	f := func(r rune) rune {
+		return r + 1
+	}
+	fmt.Println(strings.Map(f, "ab"))
 }
