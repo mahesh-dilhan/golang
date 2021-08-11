@@ -6,6 +6,9 @@ func main() {
 
 	r := []rune("Hello")
 	r[0] = 'G'
-	s := string(r)
-	fmt.Println(s)
+	buf := string(r)
+	fmt.Println(buf)
+
+	s := fmt.Sprintf("%c%c, world!", 72, 'i')
+	fmt.Println(s) // "Hi, world!"
 }
