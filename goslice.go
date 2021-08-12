@@ -15,4 +15,14 @@ func main() {
 
 	s = append(s[:2], s[3:]...)
 	fmt.Println(s) //deleete index 2
+
+	cntry := GetCountries(2)
+	fmt.Println(cntry, cap(cntry))
+}
+
+func GetCountries(size int) []string {
+	c := [...]string{"USA", "IND", "SL", "RUS"}
+	s := make([]string, size)
+	copy(s, c[:size])
+	return s
 }
