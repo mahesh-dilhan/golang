@@ -13,4 +13,6 @@ func main() {
 
 	fmt.Println(s)
 
+	s = append(s[:2], s[3:]...)
+	fmt.Println(s) //deleete index 2
 }
