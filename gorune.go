@@ -21,5 +21,9 @@ func main() {
 	fmt.Println(strings.Map(f, "ab"))
 
 	sp := strings.Split("a,b", ",")
-	fmt.Sprintf("%T ", sp)
+	fmt.Printf("%T ", sp)
+	fmt.Println("")
+	for _, VALUE := range sp {
+		fmt.Println(VALUE)
+	}
 }
