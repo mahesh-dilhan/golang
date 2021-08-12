@@ -18,6 +18,8 @@ func main() {
 
 	cntry := GetCountries(2)
 	fmt.Println(cntry, cap(cntry))
+
+	accumelate(10, 20, 30, 40, 50, 60)
 }
 
 func GetCountries(size int) []string {
@@ -25,4 +27,11 @@ func GetCountries(size int) []string {
 	s := make([]string, size)
 	copy(s, c[:size])
 	return s
+}
+
+func accumelate(num ...int) {
+	s := []int{}
+	s = append(s, num...)
+	fmt.Println(s)
+
 }
