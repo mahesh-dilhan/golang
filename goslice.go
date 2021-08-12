@@ -31,6 +31,7 @@ func GetCountries(size int) []string {
 
 func accumelate(num ...int) {
 	s := []int{}
+	fmt.Println(s == nil, s)
 	s = append(s, num...)
 	fmt.Println(s)
 
