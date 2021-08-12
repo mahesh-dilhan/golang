@@ -19,4 +19,7 @@ func main() {
 		return r + 1
 	}
 	fmt.Println(strings.Map(f, "ab"))
+
+	sp := strings.Split("a,b", ",")
+	fmt.Sprintf("%T ", sp)
 }
