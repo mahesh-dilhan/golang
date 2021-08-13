@@ -23,3 +23,14 @@ func main() {
 	var v Vechicle = &Van{km: 10}
 	fmt.Println(v)
 }
+
+type Sortable interface {
+}
+
+type Paging interface {
+}
+
+type PagingAndSorted interface {
+	Sortable
+	Paging
+}
