@@ -18,8 +18,8 @@ func main() {
 		firstname: "Mahesh",
 		lastname:  "Wijekoon",
 		fullnsmetye: func(fname string, lname string) string {
-			return fname + lname
+			return fname + " " + lname
 		},
 	}
-	fmt.Println(p)
+	fmt.Println(p.fullnsmetye(p.firstname, p.lastname))
 }
