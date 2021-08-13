@@ -20,6 +20,12 @@ func main() {
 	fmt.Println(cntry, cap(cntry))
 
 	accumelate(10, 20, 30, 40, 50, 60)
+
+	cou := new(Country)
+	cou.name = "USA"
+
+	fmt.Println(cou)
+	fmt.Println(*cou)
 }
 
 func GetCountries(size int) []string {
@@ -35,4 +41,8 @@ func accumelate(num ...int) {
 	s = append(s, num...)
 	fmt.Println(s)
 
+}
+
+type Country struct {
+	name string
 }
