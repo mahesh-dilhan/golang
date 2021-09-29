@@ -6,15 +6,21 @@ import (
 )
 
 func du(pinger <-chan int, ponger chan<- int) {
-	<-pinger
-	fmt.Println("ping 2")
-	ponger <- 1
+	for {
+		<-pinger
+		fmt.Println("ping 2")
+		time.Sleep(time.Second)
+		ponger <- 1
+	}
 }
 
 func po(pinger chan<- int, ponger <-chan int) {
-	<-ponger
-	fmt.Println("pong 2")
-	pinger <- 1
+	for {
+		<-ponger
+		fmt.Println("pong 2")
+		time.Sleep(time.Second)
+		pinger <- 1
+	}
 }
 
 func pinger(pinger <-chan int, ponger chan<- int) {
