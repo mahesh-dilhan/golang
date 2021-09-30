@@ -7,9 +7,9 @@ import (
 type FullNameType func(fname string, lname string) string
 
 type PPerson struct {
+	fullnsmetye FullNameType
 	firstname   string
 	lastname    string
-	fullnsmetye FullNameType
 }
 
 func main() {
