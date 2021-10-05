@@ -18,7 +18,6 @@ type Bird struct {
 func main() {
 
 	p := Person{"Alice", 22}
-
 	jsonData, _ := json.Marshal(p)
 	fmt.Println(string(jsonData))
 
