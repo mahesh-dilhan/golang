@@ -9,6 +9,7 @@ func main() {
 	fmt.Println("list", arr)
 
 	arr[2] = 10
+	fmt.Println(arr[2])
 	fmt.Println("list", arr)
 
 	var a int = 10
