@@ -22,4 +22,7 @@ func main() {
 	var sl []int = arr[1:2]
 
 	fmt.Println(sl)
+
+	var suf []int = arr[2:]
+	fmt.Println(suf)
 }
