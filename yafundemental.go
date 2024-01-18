@@ -35,7 +35,7 @@ func main() {
 	for i := range sub {
 		strw.WriteString(sub[i])
 	}
-	fmt.Printf("\n%v", strw.String)
+	fmt.Printf("\n%v", strw.String())
 }
 
 func division(nume int, deno int) (int, int, error) {
